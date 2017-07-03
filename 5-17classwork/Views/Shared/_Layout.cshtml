@@ -24,6 +24,10 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                <form class="form-inline nav navbar-right" method="post" action="/home/shoppingCart">
+                    <input type="hidden" id="cartId" name="cartId" value="@ViewBag.cartId">
+                    <button class="btn btn-default navbar-btn">Shopping Cart(<span id="myCart">@(ViewBag.CartItems ?? 0)</span>)</button>
+                </form>
             </div>
         </div>
     </div>

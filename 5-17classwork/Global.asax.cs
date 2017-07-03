@@ -16,6 +16,7 @@ namespace _5_17classwork
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            GlobalFilters.Filters.Add(new LayoutPageActionFilterAttribute());
         }
     }
 }

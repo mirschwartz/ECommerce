@@ -1,0 +1,20 @@
+﻿@using ECommerce.Data
+@using _5_17classwork.Models
+@model ViewDetailVM
+
+@{
+    ViewBag.Title = "ViewDetail";
+}
+
+<div class="row">
+    <div>
+        <h3>@Model.Product.Title</h3>
+        <img src="~/Images/@Model.Product.ImageFile" />
+        <p>@Model.Product.Description</p>
+        <form method="post" action="/home/addToCart">
+            <input type="hidden" value="@Model.Product.Id" name="productId" />
+            <input type="number" name="Quantity" placeholder="Quantity" class="form-control" />
+            <button class="btn btn-warning">Add To Cart</button>
+        </form>
+    </div>
+</div>
